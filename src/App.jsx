@@ -2,14 +2,16 @@ import { useState } from 'react'
 
 
 function App() {
-  const{login, setlogin} = useState(false);
+  const [ login, setLogin ] = useState(false);
 
-  function loginPressed(){
+  const buttonText = login ? 'Logout' : 'Login'
+
+  function loginPressed() {
     setLogin(true);
   }
 
   return (
-    <button onClick={loginPressed}>Login</button>
+    <button onClick={loginPressed}>{buttonText}</button>
   )
 }
 
