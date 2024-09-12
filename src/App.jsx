@@ -18,8 +18,10 @@ function App() {
 
   return (
     <>
-      <h3>Welcome!</h3>
+      <h3>Welcome {login ? username : ''}!</h3>
+      { !login && 
       <input value={username} onChange={usernameChanged} />
+      }
       <button onClick={loginPressed}>{buttonText}</button>
     </>
   )
